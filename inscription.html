@@ -1,79 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-</head>
-<body>
-    <ul>
-        <li> <a href ="Accueil.html">Missions Militaires</a></li>
-        <li> <a href ="inscription.html">Inscription/Réclamation</a></li>
-        <li> <a href ="équipements.html">Equipements militaires</a></li>
-     </ul>
-    <form>
-        <header><h1>Formulaire d'inscription ou réclamation</h1></header>
-   
-        <table>
-        
-            
-            <tr>
-                <td>
-                    <label for="">Nom:</label>
-                </td>
-                <td>
-                    <input type="text" name="nom" id="nom">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="">Prénom:</label></td>
-                <td>
-                    <input type="text" name="Prénom" id="Prénom">  
-                </td>
-            </tr>
-        
-    
-        
-            <tr>
-                <td><label for="">grade:</label></td>
-                <td><select name="Grade" id="Grade">
-                    <option>soldat</option>
-                    <option>sous officier</option>
-                    <option>officier</option>
-                    
-                </select></td>
-            </tr>
-            <br>
-            <tr>
-                <td><label for="">Email:</label></td>
-                <td>
-                    <input type="email" name="Email" id="Email">  
-                </td>
-            </tr>
-            <br>
-            <tr>
-                <td>
-                    <label for="" >Mesage:</label>
-                </td>
-                <br>
-                <td>
+    <title>Inscription/Réclamation</title>
+</head><body>
+    <header>
+        <ul>
+            <li><a href="Acceuil.html">Missions Militaires</a></li>
+            <li><a href="inscription.html">Inscription/Réclamation</a></li>
+            <li><a href="équipements.html">Équipements Militaires</a></li>
+        </ul>
+    </header>
+    <main>
+        <h1>Formulaire d'inscription ou réclamation</h1>
+        <form action="post" enctype="application/x-www-form-urlencoded">
+            <label for="nom">Nom:</label>
+            <input type="text" name="nom" id="nom"><br><br>
+            <label for="prenom">Prénom:</label>
+            <input type="text" name="prenom" id="prenom"><br><br>
+            <label for="grade">Grade :</label>
+            <select id="grade" name="grade">
+                <option value="soldat">Soldat</option>
+                <option value="caporal">Caporal</option>
+                <option value="sergent">Sergent</option>
+                <option value="sergent_major">Sergent-Major</option>
+                <option value="adjudant">Adjudant</option>
+                
+            </select><br><br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"><br><br>
+            <label for="text">Message:</label><br>
+            <textarea name="text" id="text"></textarea><br><br>
+            <label for="choisirFichier">Joindre un fichier :</label>
+            <input type="file" id="choisirFichier" name="fichier" accept=".jpg, .jpeg, .png"> <br><br>            <input type="submit" value="Envoyer">
+        </form>
+    </main>
+</body></html>
 
-                    <input type="text" >
-                </td>
-</tr>
-<tr>
-    <td>
-<input type="file" id="Choisir fichier" name="fichier" accept=".jpg, .jpeg, .png">
-</td></tr>
-                <tr>
-                   
-                    <td>
-                        <input type="submit" value ="envoyer">
-                    </td>
-                    </tr>
-        </table>
-   
-    </form>
-    
-</body>
-</html>
+
+
